@@ -1,0 +1,53 @@
+
+
+<h1>Knowledge Base</h1>
+<p><b><u>Future Features</u></b></p>
+<li>Support for multiple projects</li>
+<li>AJAX</li>
+<li>Sep kb's for user+group</li>
+
+<br/>
+<%= link_to 'New Knowledge Bit', new_knol_path, :class =>"icon-briefcase btn"  %>
+
+<br/>
+<br/>
+<table>
+  <thead>
+    <tr>
+	  <th><span class="label label-success">Name</span></th>
+      <th><span class="label label-success">Date</span></th>
+	  <th><span class="label label-success">Tags</span></th>
+      <th><span class="label label-success">Description</span></th>
+	  <th><span class="label label-success">Instructions</span></th>
+	  <th><span class="label label-success">Knowledge</span></th>
+	  <th><span class="label label-success">Examples</span></th>
+	  <th><span class="label label-primary">Show</span></th>
+      <th><span class="label label-info">Edit</span></th>
+      <th><span class="label label-warning">Destroy</span></th>
+      
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @knols.each do |knol| %>
+      <tr>
+       
+        <td><i class="icon-briefcase"></i> <%= knol.name %></td>
+		<td><%= knol.date %></td>       
+	    <td><%= knol.tags %></td>
+        <td><%= knol.desc %></td>
+        <td><%= knol.instructions %></td>
+        <td><%= knol.knowledge %></td>
+        <td><%= knol.examples %></td>
+		<td><%= link_to '', knol, :class => 'icon-dashboard icon-large' %></td>
+        <td><%= link_to '', edit_knol_path(knol), :class => 'icon-pencil' %></td>
+        <td><%= link_to '', knol, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'icon-warning-sign' %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Knowledge Bit', new_knol_path, :class =>"icon-briefcase btn"  %>

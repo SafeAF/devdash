@@ -1,0 +1,42 @@
+<div id="foo">
+</div>
+<%= link_to "[Si] Silicon Tooling v0.2", root_path, :class => 'brand' %>
+
+
+<ul class="nav">
+
+  <li>
+    <%= link_to('| ClusterStats |', :controller => "stats" )  %>
+  </li>
+
+  <li>
+    <%= link_to('| ClusterLogs |', :controller => "logs" )  %>
+  </li>
+
+    <li>
+    <%= link_to('| Todo |', :controller => "todos" )  %>
+    </li>
+
+
+    <li>
+    <%= link_to('| KnowledgeBase |',  :controller => "knols") %>
+    </li>
+
+    <li>
+    <%= link_to('| BugTraq |', :controller => 'bugtraqs')  %>
+    </li>
+
+   <li>
+    <%= link_to('| Dev Resources |', :controller => "stors")  %>
+    </li>
+
+
+    <li>
+    <%= link_to('| Login |', '/users/sign_in') %>
+    </li>
+
+    <li>
+    <%= link_to('| Logout |', '/users/sign_out')  %>
+    </li>
+
+</ul>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  date: 2013-09-07 05:42:00
+  name: MyString
+  tags: MyString
+  desc: MyString
+  instructions: MyText
+  knowledge: MyText
+  examples: MyText
+
+two:
+  date: 2013-09-07 05:42:00
+  name: MyString
+  tags: MyString
+  desc: MyString
+  instructions: MyText
+  knowledge: MyText
+  examples: MyText

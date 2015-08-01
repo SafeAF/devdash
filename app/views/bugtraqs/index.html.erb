@@ -1,0 +1,60 @@
+<h1>BugTraq for Emergence</h1>
+<p><b><u>Future Features</u></b></p>
+<li>Support for multiple projects</li>
+<li>AJAX</li>
+<li>Display relevent code snippets w/syntax highlighting</li>
+
+<br/>
+
+<%= link_to ' New Bug', new_bugtraq_path, :class =>"icon-bug btn" %>
+<br/>
+<br/>
+
+<table>
+  <thead>
+    <tr>
+	  <th><span class="label label-success">Name</span></th>
+      <th><span class="label label-success">Inception Date</span></th>
+      <th><span class="label label-success">Target Date</span></th>
+      <th><span class="label label-success">Description</span></th>
+	  <th><span class="label label-success">Tags</span></th>
+	  <th><span class="label label-success">Priority</span></th>
+	  <th><span class="label label-success">Bug</span></th>
+	  <th><span class="label label-success">Fix</span></th>
+	  <th><span class="label label-success">Source File</span></th>
+	  <th><span class="label label-success">Remediated?</span></th>
+      <th><span class="label label-primary">Show</span></th>
+      <th><span class="label label-info">Edit</span></th>
+      <th><span class="label label-warning">Destroy</span></th>
+	  
+
+      
+    </tr>
+  </thead>
+
+  
+  <tbody>
+    <% @bugtraqs.each do |bugtraq| %>
+      <tr>
+        <td><i class="icon-bug"></i> <%= bugtraq.name %></td>
+        <td><%= bugtraq.incep_date %></td>
+        <td><%= bugtraq.target_date %></td>
+        <td><%= bugtraq.desc %></td>
+        <td><%= bugtraq.tags %></td>
+        <td><%= bugtraq.priority %></td>
+        <td><%= bugtraq.bug %></td>
+        <td><%= bugtraq.fix %></td>
+        <td><%= bugtraq.sourcefile %></td>
+        <td><%= bugtraq.remediated %></td>
+        <td><%= link_to '', bugtraq, :class => 'icon-dashboard icon-large' %></td>
+        <td><%= link_to '', edit_bugtraq_path(bugtraq), :class => 'icon-pencil' %></td>
+        <td><%= link_to '', bugtraq, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'icon-warning-sign' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= link_to ' New Bug', new_bugtraq_path, :class =>"icon-bug btn" %>

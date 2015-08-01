@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @bugtraq.name %>
+</p>
+
+<p>
+  <strong>Incep date:</strong>
+  <%= @bugtraq.incep_date %>
+</p>
+
+<p>
+  <strong>Target date:</strong>
+  <%= @bugtraq.target_date %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @bugtraq.desc %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @bugtraq.tags %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @bugtraq.priority %>
+</p>
+
+<p>
+  <strong>Bug:</strong>
+  <%= @bugtraq.bug %>
+</p>
+
+<p>
+  <strong>Fix:</strong>
+  <%= @bugtraq.fix %>
+</p>
+
+<p>
+  <strong>Sourcefile:</strong>
+  <%= @bugtraq.sourcefile %>
+</p>
+
+<p>
+  <strong>Remediated:</strong>
+  <%= @bugtraq.remediated %>
+</p>
+
+<%= link_to 'Edit', edit_bugtraq_path(@bugtraq) %> |
+<%= link_to 'Back', bugtraqs_path %>

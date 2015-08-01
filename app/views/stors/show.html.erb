@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @stor.name %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @stor.tags %>
+</p>
+
+<p>
+  <strong>Upload date:</strong>
+  <%= @stor.upload_date %>
+</p>
+
+<p>
+  <strong>Upload file:</strong>
+  <%= @stor.upload_file %>
+</p>
+
+<%= link_to 'Edit', edit_stor_path(@stor) %> |
+<%= link_to 'Back', stors_path %>

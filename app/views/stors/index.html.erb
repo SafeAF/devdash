@@ -1,0 +1,59 @@
+<h1>Development Resources</h1>
+<center>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Tags</th>
+      <th>Upload date</th>
+      <th>Upload file</th>
+	  <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stors.each do |stor| %>
+      <tr>
+        <td><%= stor.name %></td>
+        <td><%= stor.tags %></td>
+        <td><%= stor.upload_date %></td>
+        <td><%= stor.upload_file %></td>
+        <td><%= link_to 'Show', stor %></td>
+        <td><%= link_to 'Edit', edit_stor_path(stor) %></td>
+        <td><%= link_to 'Destroy', stor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to ' New Stor', new_stor_path, :class =>"icon-paperclip btn" %>
+
+<br/><br/><br/>
+
+<h2>All Files in public/</h2>
+
+<center>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @files.each do |file| %>
+      <tr>
+        <td><%= file %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</center>

@@ -1,0 +1,45 @@
+<%= form_for(@knol) do |f| %>
+  <% if @knol.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@knol.errors.count, "error") %> prohibited this knol from being saved:</h2>
+
+      <ul>
+      <% @knol.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.datetime_select :date %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :tags %><br>
+    <%= f.text_field :tags %>
+  </div>
+  <div class="field">
+    <%= f.label :desc %><br>
+    <%= f.text_field :desc %>
+  </div>
+  <div class="field">
+    <%= f.label :instructions %><br>
+    <%= f.text_area :instructions %>
+  </div>
+  <div class="field">
+    <%= f.label :knowledge %><br>
+    <%= f.text_area :knowledge %>
+  </div>
+  <div class="field">
+    <%= f.label :examples %><br>
+    <%= f.text_area :examples %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

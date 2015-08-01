@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @basis.id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @basis.name %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @basis.tags %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @basis.date %>
+</p>
+
+<p>
+  <strong>Examples:</strong>
+  <%= @basis.examples %>
+</p>
+
+<p>
+  <strong>Knowledge:</strong>
+  <%= @basis.knowledge %>
+</p>
+
+<p>
+  <strong>Instructions:</strong>
+  <%= @basis.instructions %>
+</p>
+
+<%= link_to 'Edit', edit_basis_path(@basis) %> |
+<%= link_to 'Back', bases_path %>

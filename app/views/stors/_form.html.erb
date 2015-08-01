@@ -1,0 +1,33 @@
+<%= form_for(@stor) do |f| %>
+  <% if @stor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stor.errors.count, "error") %> prohibited this Development Resource from being saved:</h2>
+
+      <ul>
+      <% @stor.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :tags %><br>
+    <%= f.text_field :tags %>
+  </div>
+  <div class="field">
+    <%= f.label :upload_date %><br>
+    <%= f.datetime_select :upload_date %>
+  </div>
+  <div class="field">
+    <%= f.label :uploadurl %><br>
+    <%= f.file_field :uploadurl %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

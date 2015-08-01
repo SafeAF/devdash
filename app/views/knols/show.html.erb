@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @knol.date %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @knol.name %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @knol.tags %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @knol.desc %>
+</p>
+
+<p>
+  <strong>Instructions:</strong>
+  <%= @knol.instructions %>
+</p>
+
+<p>
+  <strong>Knowledge:</strong>
+  <%= @knol.knowledge %>
+</p>
+
+<p>
+  <strong>Examples:</strong>
+  <%= @knol.examples %>
+</p>
+
+<%= link_to 'Edit', edit_knol_path(@knol) %> |
+<%= link_to 'Back', knols_path %>

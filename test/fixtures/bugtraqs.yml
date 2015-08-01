@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  incep_date: 2013-09-08 01:53:11
+  target_date: 2013-09-08 01:53:11
+  desc: MyText
+  tags: MyString
+  priority: 1
+  bug: MyText
+  fix: MyText
+  sourcefile: MyString
+  remediated: false
+
+two:
+  name: MyString
+  incep_date: 2013-09-08 01:53:11
+  target_date: 2013-09-08 01:53:11
+  desc: MyText
+  tags: MyString
+  priority: 1
+  bug: MyText
+  fix: MyText
+  sourcefile: MyString
+  remediated: false

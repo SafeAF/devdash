@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  num: 1
+  name: MyString
+  incep_date: 2013-09-07 03:05:11
+  target_date: 2013-09-07 03:05:11
+  priority: 1
+  desc: MyText
+
+two:
+  num: 1
+  name: MyString
+  incep_date: 2013-09-07 03:05:11
+  target_date: 2013-09-07 03:05:11
+  priority: 1
+  desc: MyText

@@ -1,0 +1,52 @@
+<h1>Welcome to BMN Dev & Ops Dashboard v0.2</h1>
+<h2>Developer and Operations Management Software</h2>
+<h3>For startups with limited resources and development and operations are blended</h3>
+
+<h2>Top 10 TODOs</h2>
+<h3>Priority Greater than 5</h3>
+<table>
+  <thead>
+    <tr>
+      <th><span class="label label-success">Number</span></th>
+      <th><span class="label label-success">Name</span></th>
+      <th><span class="label label-success">Inception Date</span></th>
+      <th><span class="label label-success">Target Date</span></th>
+      <th><span class="label label-success">Priority</span></th>
+      <th><span class="label label-success">Description</span></th>
+      <th><span class="label label-primary">Show</span></th>
+      <th><span class="label label-info">Edit</span></th>
+      <th><span class="label label-warning">Destroy</span></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @todos.each do |todo| %>
+      <tr>
+        <td><%= todo.num %></td>
+        <td><i class="icon-coffee"></i> <%= todo.name.capitalize! %></td>
+        <td><%= todo.incep_date %></td>
+        <td><%= todo.target_date %></td>
+        <td><%= todo.priority %></td>
+        <td><%= todo.desc %></td>
+		<td>
+		 <span class="label label-primary">
+		 <%= link_to '', todo, :class => 'icon-dashboard icon-large' %>
+		 </span>
+		 </td>
+        <td>
+		 <span class="label label-info">
+		  <%= link_to '', edit_todo_path(todo), :class => 'icon-pencil' %>
+		 </span>
+		 </td>
+        <td>
+		 <span class="label label-warning">
+		  <%= link_to '', todo, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'icon-warning-sign' %>
+		 </span>
+		</td>
+      </tr>
+    <% end %>
+
+
+  </tbody>
+</table>
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
